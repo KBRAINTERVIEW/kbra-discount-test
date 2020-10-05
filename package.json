@@ -14,14 +14,6 @@
     "test": "jest -c ./jest.config.js --passWithNoTests",
     "test:ci": "jest -c ./jest.config.js --no-colors --coverage --ci --reporters=default --reporters=jest-junit --coverageReporters=html --coverageReporters=text --coverageReporters=lcov"
   },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@code.kbra.network:7999/abs/abs-presentation-api.git"
-  },
-  "keywords": [
-    "ABS",
-    "RestAPI"
-  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
