@@ -1,9 +1,12 @@
+import { cache } from "discount/cache";
+import { users } from "./users";
+
 export const firstNameRepository = {
   fetch: (userId: number): string => {
-    if (userId == 1) {
-      return "Jane";
-    } else {
-      return "John";
+    if (cache.has(userId)) {
+      return cache.get(userId);
     }
+
+    return users[userId].firstName;
   }
 };

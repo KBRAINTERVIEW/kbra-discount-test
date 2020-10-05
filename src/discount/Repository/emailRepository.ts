@@ -1,9 +1,12 @@
+import { cache } from "discount/cache";
+import { emails } from "./users";
+
 export const emailRepository = {
   fetch: (userId: number): string => {
-    if (userId == 1) {
-      return "JaneDoe@abc.com";
-    } else {
-      return "JohnDoe@abc.com";
+    if (cache.has(userId)) {
+      return cache.get(userId);
     }
+
+    emails[userId];
   }
 };
